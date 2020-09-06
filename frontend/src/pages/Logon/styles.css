@@ -1,0 +1,43 @@
+h1{
+    color: #3f51b5;
+    font-weight: 100;
+}
+
+.logo-container{
+    width: 100%;
+    max-width: 1120px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container section.form{
+    width: 100%;
+    max-width: 425px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container section.form span {
+    margin-left: 5px;
+}
+
+.image{
+    max-width: 400px;
+    margin-right: 150px;
+}
+
+.logo-container section.form form h1{
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 998px){
+    .image{
+    display:none;
+    }
+}
