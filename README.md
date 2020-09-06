@@ -34,12 +34,15 @@
 
 <h2>Como executar o projeto</h2>
 <ol>
-  <li>Abra o terminal de preferência dentro da pasta do projeto e rode o MongoDB com o comando: <b>mongod</b>. Você verá algo assim:</li>
-  <p align="center"><img src="https://github.com/LuandaRezende/fullstack-challenge/backend.png"></p>
-  <li>Abra a pasta do backend e execute os comandos: <b>npm install</b> e <b>npm start</b>. Após executar o <b>npm start</b> verá que o servidor subiu.</li>
-   <p align="center"><img src="https://github.com/LuandaRezende/fullstack-challenge/frontend.png"></p>
-  <li>Agora abra a pasta do frontend e execute os comandos: <b>npm install</b> e <b>npm start</b>. Após executar o <b>npm start</b>, em seu browser irá subir o servidor com a tela inicial da aplicação.</li>
-    <p align="center"><img src="https://github.com/LuandaRezende/fullstack-challenge/pagina-inicial.png"></p>
+  <li>Abra o terminal de preferência dentro da pasta do projeto e rode o MongoDB com o comando: <b>mongod</b>. Você verá algo assim:
+    <p align="center"><img src="https://github.com/LuandaRezende/fullstack-challenge/blob/master/mongod.png"></p>
+  </li>
+  <li>Abra a pasta do backend e execute os comandos: <b>npm install</b> e <b>npm start</b>. Após executar o <b>npm start</b> verá que o servidor subiu.   
+    <p align="center"><img src="https://github.com/LuandaRezende/fullstack-challenge/blob/master/backend.png"></p>
+    </li>
+  <li>Agora abra a pasta do frontend e execute os comandos: <b>npm install</b> e <b>npm start</b>. Após executar o <b>npm start</b>, em seu browser irá subir o servidor com a tela inicial da aplicação.
+      <p align="center"><img src="hhttps://github.com/LuandaRezende/fullstack-challenge/blob/master/pagina-inicial.png"></p>
+  </li>
 </ol>
 
 
