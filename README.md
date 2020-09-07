@@ -3,7 +3,6 @@
 <h2>As Tecnologias utilizadas</h2>
 <ul>
   <li><a href="https://nodejs.org/">Node.js v12.16.1</a></li>
-  <li><a href="https://www.javascript.com/">JavaScript</a></li>
   <li><a href="https://www.mongodb.com/">MongoDB</a></li>
   <li><a href="https://mongoosejs.com/">Mongoose ODM</a></li>
   <li><a href="https://expressjs.com/pt-br/">Express 4.17.1</a></li>
