@@ -39,7 +39,7 @@
   <li>Abra a pasta do backend e execute os comandos: <b>npm install</b> e <b>npm start</b>. Após executar o <b>npm start</b> verá que o servidor subiu.   
     <p align="center"><img src="https://github.com/LuandaRezende/fullstack-challenge/blob/master/backend.png"></p>
     </li>
-  <li>Agora abra a pasta do frontend e execute os comandos: <b>npm install</b> e <b>npm start</b>. Após executar o <b>npm start</b>, em seu browser irá subir o servidor com a tela inicial da aplicação.
+  <li>Agora abra a pasta do frontend e execute os comandos: <b>npm install</b> e <b>npm start</b>. Após executar o <b>npm start</b>, em seu browser irá subir a tela inicial da aplicação.
       <p align="center"><img src="https://github.com/LuandaRezende/fullstack-challenge/blob/master/pagina-inicial.png"></p>
   </li>
 </ol>
