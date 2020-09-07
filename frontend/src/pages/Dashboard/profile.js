@@ -6,6 +6,8 @@ import MenuAdmin from './menu-admin';
 import Paper from '@material-ui/core/Paper';
 import { useHistory } from 'react-router-dom';
 import api from '../../services/api';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -53,6 +55,14 @@ export default function NewTransation() {
 
   const history = useHistory();
 
+  function notifySuccess(){
+    toast('Editado com sucesso!');
+  }
+
+  function notifyError(){
+      toast('Falha ao editar');
+  }
+
   useEffect(() => {
     api.get('users/data/:id', {
       headers: {
@@ -80,9 +90,11 @@ export default function NewTransation() {
       localStorage.setItem('email', email);
       localStorage.setItem('password', password);
 
-      alert(`Editado com sucesso`);
+      notifySuccess();
 
-      history.push('/dashboard/profile');
+      setTimeout(() => {
+        history.push('/dashboard/profile')
+      }, 2000);
 
     } catch (error) {
       alert(`Falha ao editar`);
@@ -106,6 +118,7 @@ export default function NewTransation() {
                                   <input type="email" id="email" name="email" onChange={event => setEmail(event.target.value)} placeholder={profile.email} />
                                   <input type="password" id="password" name="password" onChange={event => setPassword(event.target.value)} placeholder="Digite sua nova senha" />
                                   <button className="button" type="submit">Editar</button>
+                                  <ToastContainer />
                               </form>
                           </Grid>
                       </Grid>

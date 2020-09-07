@@ -77,7 +77,7 @@ export default function Dashboard() {
           <Container maxWidth="lg" className={classes.container}>
             <Grid container spacing={3}>
               <Grid item xs={12} sm={12}>
-                <Link to="/dashboard/new-transaction">
+                <Link to="/dashboard/new-transaction" style={{ textDecoration: 'none' }}>
                   <Button variant="contained" color="primary">
                     Nova transação
                    </Button>
@@ -87,8 +87,8 @@ export default function Dashboard() {
                 <Table className={classes.table} aria-label="simple table">
                   <TableHead>
                     <TableRow>
-                      <TableCell align="center">Valor(R$)</TableCell>
                       <TableCell align="center">Descrição</TableCell>
+                      <TableCell align="center">Valor(R$)</TableCell>
                       <TableCell align="center">Tipo</TableCell>
                     </TableRow>
                   </TableHead>

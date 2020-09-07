@@ -6,6 +6,8 @@ import MenuAdmin from './menu-admin';
 import Paper from '@material-ui/core/Paper';
 import { useHistory } from 'react-router-dom';
 import api from '../../services/api';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,6 +54,14 @@ export default function NewTransaction() {
 
   const classes = useStyles();
 
+  function notifySuccess(){
+    toast('Cadastrado com sucesso!');
+  }
+
+  function notifyError(){
+      toast('Falha ao cadastrar nova transação');
+  }
+
   async function handleNewTransaction(e) {
     e.preventDefault();
 
@@ -71,11 +81,13 @@ export default function NewTransaction() {
         }
       }).then(response => {
         setType(type);
-        alert('Cadastrada com sucesso');
-        history.push('/dashboard');
+        notifySuccess();
+        setTimeout(() => {
+            history.push('/dashboard')
+         }, 5000);
       })
     } catch (error) {
-      alert('Erro ao cadastrar transação, tente novamente!');
+      notifyError();
     }
   }
 
@@ -93,12 +105,13 @@ export default function NewTransaction() {
                             <Grid item xs={12}>
                               <form onSubmit={handleNewTransaction}>
                                   <input placeholder="Nome do produto" value={title} onChange={e => setTitle(e.target.value)} />
-                                  <input placeholder="Valor em número *sem (,) e (.)" value={value} onChange={e => setValue(e.target.value)} />
+                                  <input placeholder="Valor em R$ *sem (,) e (.)" value={value} onChange={e => setValue(e.target.value)} />
                                     <select onChange={event => setType(event.target.value)}>
                                       <option value="outcome" >Outcome</option>
                                       <option value="income" >Income</option>
                                     </select>
                                   <button className="button" type="submit">Cadastrar</button>
+                                  <ToastContainer />
                               </form>
                             </Grid>
                         </Grid>

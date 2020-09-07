@@ -1,7 +1,7 @@
 const express = require('express');
 const authMiddleware = require('../middlewares/auth');
 const router = express.Router();
-const User = require ('../models/User');
+const User = require ('../models/user');
 
 router.use(authMiddleware);
 
@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
 
     try {
         const users = await User.find();
-        return res.send({ users });
+        return res.status(200).send({ users });
 
     } catch (error) {
         return res.status(400).send({ error: 'Error loading'});
@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
 router.get('/:userId', async(req, res) => {
     try {
         const user = await User.findById(req.userId);
-        return res.send(user);
+        return res.status(200).send(user);
     } catch (error) {
         return res.status(400).send({ error: 'Error loading'});
     }
@@ -29,7 +29,7 @@ router.get('/:userId', async(req, res) => {
 router.get('/data/:userId', async(req, res) => {
     try {
         const user = await User.findById(req.userId);
-        return res.send(user);
+        return res.status(200).send(user);
 
     } catch (error) {
         return res.status(400).send({ error: 'Error loading'});
@@ -47,7 +47,7 @@ router.put('/:userId', async(req, res) => {
 
         await user.save();
 
-        return res.send({ user });
+        return res.status(200).send({ user });
     } catch (error) {
         return res.status(400).send({ error:'Failed' });
     }

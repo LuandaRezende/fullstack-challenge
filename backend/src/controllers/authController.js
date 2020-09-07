@@ -1,5 +1,5 @@
 const express = require ('express');
-const User  = require ('../models/User');
+const User  = require ('../models/user');
 const jwt = require ('jsonwebtoken');
 const authConfig = require ('../config/auth.json');
 const router = express.Router();
@@ -13,9 +13,9 @@ function generateToken( params = {}){
 router.post('/register', async (req, res) => {
     try {
         const user = await User.create(req.body);
-        return res.send({ user, token: generateToken({ id: user.id }) });
+        return res.status(200).send({ user, token: generateToken({ id: user.id }) });
     } catch (error) {
-        return res.status(400).send({ error:'Failed' });
+        return res.status(400).send({ error:'Email already exists' });
     }
 });
 
@@ -28,8 +28,6 @@ router.post('/authenticate', async(req, res) => {
     }if (await password === user.password && email === user.email){
          res.send({ user, token: generateToken({ id: user.id }) });
         return res.status(200).send({ user, token });
-    }else{
-        return res.status(400).send({ error: 'Invalid' });
     };
 })
 

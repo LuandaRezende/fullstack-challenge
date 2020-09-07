@@ -2,7 +2,7 @@ const express = require('express');
 const authMiddleware = require('../middlewares/auth');
 const router = express.Router();
 const Transaction = require ('../models/transactions');
-const User = require('../models/User');
+const User = require('../models/user');
 router.use(authMiddleware);
 
 
@@ -38,7 +38,7 @@ router.post('/register', async(req, res) => {
 
     try {
         const transaction = await Transaction.create(req.body);
-        return res.send({ transaction });
+        return res.status(200).send({ transaction });
     } catch (error) {
         return res.status(400).send({error: 'Failed create new transation'});
     }
