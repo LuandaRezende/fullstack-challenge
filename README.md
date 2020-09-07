@@ -16,7 +16,7 @@
 <h3>Backend</h3>
 <ul>
   <li>Cadastro de usuários</li>
-  <li>Edição dos dados dos usuário</li>
+  <li>Edição dos dados do usuário</li>
   <li>Listagem dos dados do usuário</li>
   <li>Autenticação com JWT</li>
   <li>Cadastro de transações</li>
